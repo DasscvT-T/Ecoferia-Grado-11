@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecoferia Escolar 11°</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content animate__animated animate__fadeInDown">
+      <h1 class="display-3">🍃 Ecoferia Escolar 11°</h1>
+      <p class="lead">Los mejores productos de nuestros estudiantes</p>
+      <a href="#productos" class="btn btn-success btn-lg">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="container py-5">
+    <h2 class="text-center mb-4 animate__animated animate__fadeInUp">🛍️ Nuestros productos</h2>
+    <div class="row g-4">
+      
+      <!-- Helados -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn">
+          <img src="imagenes/helados.jpg" class="card-img-top" alt="Helados artesanales">
+          <div class="card-body text-center">
+            <h5 class="card-title">Helados</h5>
+            <p class="card-text">Sabores únicos preparados por estudiantes.</p>
+            <span class="fw-bold text-success">$3.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalHelados">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Muebles -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-1s">
+          <img src="imagenes/muebles.jpg" class="card-img-top" alt="Muebles artesanales">
+          <div class="card-body text-center">
+            <h5 class="card-title">Muebles</h5>
+            <p class="card-text">Diseños sostenibles y hechos a mano.</p>
+            <span class="fw-bold text-success">Desde $50.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalMuebles">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jabones -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-2s">
+          <img src="imagenes/jabones.jpg" class="card-img-top" alt="Jabones artesanales">
+          <div class="card-body text-center">
+            <h5 class="card-title">Jabones</h5>
+            <p class="card-text">Ecológicos y amigables con el medio ambiente.</p>
+            <span class="fw-bold text-success">$5.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalJabones">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estampados -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-3s">
+          <img src="imagenes/estampados.jpg" class="card-img-top" alt="Estampados personalizados">
+          <div class="card-body text-center">
+            <h5 class="card-title">Estampados</h5>
+            <p class="card-text">Camisetas y accesorios con diseños únicos.</p>
+            <span class="fw-bold text-success">Desde $20.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalEstampados">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Llaveros -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-4s">
+          <img src="imagenes/llaveros.jpg" class="card-img-top" alt="Llaveros y accesorios de resina">
+          <div class="card-body text-center">
+            <h5 class="card-title">Llaveros y accesorios de resina</h5>
+            <p class="card-text">Creatividad hecha arte en cada pieza.</p>
+            <span class="fw-bold text-success">$10.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalLlaveros">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modales -->
+  <!-- Helados -->
+  <div class="modal fade" id="modalHelados" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Helados - Grupo 11°</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Este grupo ofrece helados artesanales en distintos sabores. Frescos y deliciosos, perfectos para la feria.</p>
+          <p><strong>Integrantes:</strong> [Nombres de estudiantes]</p>
+          <p><strong>Precio:</strong> $3.000</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Pedir ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Muebles -->
+  <div class="modal fade" id="modalMuebles" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Muebles - Grupo 11°</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Muebles hechos a mano con materiales sostenibles, ideales para el hogar.</p>
+          <p><strong>Integrantes:</strong> [Nombres de estudiantes]</p>
+          <p><strong>Precios:</strong> Desde $50.000</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Pedir ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jabones -->
+  <div class="modal fade" id="modalJabones" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Jabones - Grupo 11°</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Jabones naturales, con aromas agradables y respetuosos con el medio ambiente.</p>
+          <p><strong>Integrantes:</strong> [Nombres de estudiantes]</p>
+          <p><strong>Precio:</strong> $5.000</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Pedir ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estampados -->
+  <div class="modal fade" id="modalEstampados" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Estampados - Grupo 11°</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Camisetas y accesorios personalizados con estampados modernos.</p>
+          <p><strong>Integrantes:</strong> [Nombres de estudiantes]</p>
+          <p><strong>Precios:</strong> Desde $20.000</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Pedir ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Llaveros -->
+  <div class="modal fade" id="modalLlaveros" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Llaveros y accesorios de resina - Grupo 11°</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Llaveros y accesorios hechos con resina, llenos de color y creatividad.</p>
+          <p><strong>Integrantes:</strong> [Nombres de estudiantes]</p>
+          <p><strong>Precio:</strong> $10.000</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Pedir ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ecoferia Escolar 11° | Institucion Educativa Pablo Emilio Carvajal SEDE Matias Mulumba
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
