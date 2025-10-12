@@ -1,0 +1,97 @@
+/* ================================
+   ESTILOS GENERALES
+================================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   NAVBAR
+================================== */
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* ================================
+   HERO
+================================== */
+.hero {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("imagenes/fondo-eco.jpg") no-repeat center center/cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+  background-color: #28a745;
+  color: white;
+}
+
+/* ================================
+   SECCIONES
+================================== */
+section {
+  padding-top: 60px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #28a745;
+}
+
+/* ================================
+   FOOTER
+================================== */
+footer {
+  background-color: #198754;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+.modal-body img {
+  width: 250px;          /* tamaño fijo */
+  height: 180px;         /* alto proporcional */
+  object-fit: cover;     /* recorta sin deformar */
+  border-radius: 10px;   /* esquinas redondeadas */
+  margin: 10px;          /* espacio entre imágenes */
+  display: block;        /* una debajo de otra */
+  margin-left: auto;     /* centrado horizontal */
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra suave */
+}

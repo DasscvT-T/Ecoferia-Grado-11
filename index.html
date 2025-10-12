@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecoferia Escolar 11°</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: url("https://www.buenaventura.gov.co/media/img/20201013_letras_bun-1000_667.jpg") center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .contenedor-principal {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .columna {
+      text-align: center;
+    }
+    .columna img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content animate__animated animate__fadeInDown">
+      <h1 class="display-3">🍃 Ecoferia Escolar 11°</h1>
+      <p class="lead">Los mejores productos de nuestros estudiantes</p>
+      <a href="#productos" class="btn btn-success btn-lg">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="container py-5">
+    <h2 class="text-center mb-4 animate__animated animate__fadeInUp">🛍️ Nuestros productos  </h2>
+    <div class="row g-4">
+      
+      <!-- Helados -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn">
+          <img src="PacifiCream.jpeg" class="card-img-top" alt="Helados artesanales">
+          <div class="card-body text-center">
+            <h5 class="card-title">&#x1F366;Helados&#x1F37A;</h5>
+            <p class="card-text">Sabores únicos preparados por estudiantes.</p>
+            <span class="fw-bold text-success">$2.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalHelados">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Muebles -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-1s">
+          <img src="Mueble.jpeg" class="card-img-top" alt="Muebles artesanales">
+          <div class="card-body text-center">
+            <h5 class="card-title">&#x1FA91;Muebles&#x1F6CB;</h5>
+            <p class="card-text">Muebles en llantas para cuidar el medio ambiente.</p>
+            <span class="fw-bold text-success">Desde $120.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalMuebles">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jabones -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-2s">
+          <img src="Jabones.jpeg" class="card-img-top" alt="Jabones artesanales">
+          <div class="card-body text-center">
+            <h5 class="card-title">&#x1F9FC;Jabones&#x1F4A7;</h5>
+            <p class="card-text">Ecológicos y amigables con el medio ambiente.</p>
+            <span class="fw-bold text-success">$2.500</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalJabones">Ver más / Pedir </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estampados -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-3s">
+          <img src="Estampados1.jpeg" class="card-img-top" alt="Estampados personalizados">
+          <div class="card-body text-center">
+            <h5 class="card-title">&#x1F455;Estampados&#x1F3A8;</h5>
+            <p class="card-text">Camisetas y accesorios con diseños únicos.</p>
+            <span class="fw-bold text-success">Desde $35.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalEstampados">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Llaveros -->
+      <div class="col-md-4">
+        <div class="card shadow animate__animated animate__zoomIn animate__delay-4s">
+          <img src="llaveros.jpeg" class="card-img-top" alt="Llaveros">
+          <div class="card-body text-center">
+            <h5 class="card-title">&#x1F511;Llaveros y accesorios de resina&#x2728;</h5>
+            <p class="card-text">Creatividad hecha arte en cada pieza.</p>
+            <span class="fw-bold text-success">$10.000</span><br>
+            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalLlaveros">Ver más / Pedir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modales -->
+  <!-- Helados -->
+<div class="modal fade" id="modalHelados" tabindex="-1" aria-labelledby="modalHeladosLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalHeladosLabel">Helados - Grupo 11°</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h3>Coco</h3>
+            <img src="Helado_de_Coco.jpeg" alt="Helado de Coco" class="img-fluid rounded shadow" width="300" height="200">
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <h3>Borojó</h3>
+            <img src="Helado_de_Borojo.jpeg" alt="Helado de Borojó" class="img-fluid rounded shadow" width="300" height="200">
+          </div>
+
+          <div class="col-md-6 mb-4 mx-auto">
+            <h3>Chontaduro</h3>
+            <img src="Helado_de_Chontaduro.jpeg" alt="Helado de Chontaduro" class="img-fluid rounded shadow" width="300" height="200">
+          </div>
+        </div>
+
+        <p class="mt-3">
+          Helados artesanales en distintos sabores frescos y deliciosos.
+        </p>
+
+        <p><strong>Integrantes:</strong> Jose Daniel, Deivi Josue, Yireth Hahianannah, Valeria Alexandra.</p>
+        <p><strong>Precio:</strong> $2.000</p>
+
+        <!-- Botón de pedir (solo funciona en móviles) -->
+        <button class="btn btn-success mt-3" onclick="pedirHelado()">Pedir 📞</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script (puedes ponerlo al final del body) -->
+<script>
+function pedirHelado() {
+  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const numero = '+573161169160'; // <-- cambia por tu número
+
+  if (esMovil) {
+    window.location.href = 'tel:' + numero;
+  }
+}
+</script>
+
+  <!-- Muebles -->
+  <div class="modal fade" id="modalMuebles" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Muebles - Grupo 11°</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="contenedor-principal">
+          <div class="columna text-center">
+            <h2>Mueble</h2>
+            <img src="Mueble_Gris.jpeg" alt="Mueble gris" class="img-fluid rounded shadow" width="300" height="200">
+          </div>
+        </div>
+
+        <p class="mt-3">Muebles hechos a mano con materiales sostenibles, ideales para el hogar, muebles elaborados a partir de llantas son una excelente opción sostenible y duradera.</p>
+        <p><strong>Integrantes:</strong> Bairon Andrés, Geidy Andrea, Deivy Alexander, Nicol Daniela.</p>
+        <p><strong>Precio:</strong> Desde $120.000</p>
+      </div>
+
+      <div class="modal-footer">
+        <!-- Botón de pedir (solo funciona en móviles) -->
+        <button class="btn btn-success" onclick="pedirMueble()">Pedir 📞</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script (puede ir al final del body una sola vez para todos los modales) -->
+<script>
+function pedirMueble() {
+  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const numero = '+573001234567'; // <-- cambia este número
+
+  if (esMovil) {
+    window.location.href = 'tel:' + numero;
+  }
+}
+</script>
+
+
+  <!-- Jabones -->
+<div class="modal fade" id="modalJabones" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Jabones - Grupo 11°</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="contenedor-principal d-flex justify-content-around">
+          <div class="columna text-center">
+            <h2>Jabón</h2>
+            <img src="Jabones.jpeg" alt="Jabón de Aceite Reciclado" class="img-fluid rounded shadow" width="300" height="300">
+          </div>
+        </div>
+
+        <p class="mt-3">
+          Jabones artesanales a base de aceite reciclado para cuidar el medio ambiente, jabones que suavizan y protegen la piel.
+        </p>
+        <p><strong>Integrantes:</strong> Vivian Nicoll, Janny Yurlay, Lina Gisella, Johan Sebastián, Fabián Andrés.</p>
+        <p><strong>Precio:</strong> $2.500</p>
+      </div>
+
+      <div class="modal-footer">
+        <!-- Botón de pedir (solo funciona en móviles) -->
+        <button class="btn btn-success" onclick="pedirJabon()">Pedir 📞</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script (puede ir al final del body, uno por modal si cada grupo tiene su número) -->
+<script>
+function pedirJabon() {
+  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const numero = '+573001234567'; // <-- cambia este número por el del grupo de Jabones
+
+  if (esMovil) {
+    window.location.href = 'tel:' + numero;
+  }
+}
+</script>
+
+
+<!-- Estampados -->
+<div class="modal fade" id="modalEstampados" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Estampados - Grupo 11°</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="contenedor-principal d-flex justify-content-around">
+          <div class="columna text-center">
+            <h2>Estampado</h2>
+            <img src="Estampados1.jpeg" alt="Camiseta estampada" class="img-fluid rounded shadow" width="300" height="300">
+          </div>
+          <div class="columna text-center">
+            <h2>Estampado</h2>
+            <img src="Stampados2.jpeg" alt="Taza personalizada" class="img-fluid rounded shadow" width="300" height="300">
+          </div>
+        </div>
+
+        <p class="mt-3">Camisetas y accesorios personalizados con estampados modernos,  estampados coloridos y personalizados de alta calidad.</p>
+        <p><strong>Integrantes:</strong> Jaider Stiven, Marlin Lizeth, Isaac Amir, Maria Fernanda.</p>
+        <p><strong>Precios:</strong> Desde $35.000</p>
+      </div>
+
+      <div class="modal-footer">
+        <!-- Botón de pedir (solo funciona en móviles) -->
+        <button class="btn btn-success" onclick="pedirEstampado()">Pedir 📞</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script (puede ir al final del body si cada grupo tiene su número distinto) -->
+<script>
+function pedirEstampado() {
+  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const numero = '+573001234567'; // <-- cambia este número por el del grupo de Estampados
+
+  if (esMovil) {
+    window.location.href = 'tel:' + numero;
+  }
+}
+</script>
+
+<!-- Llaveros -->
+<div class="modal fade" id="modalLlaveros" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Llaveros y accesorios de resina - Grupo 11°</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="contenedor-principal d-flex justify-content-around">
+          <div class="columna text-center">
+            <h2>Llaveros</h2>
+            <img src="Llaveros1.jpeg" alt="Llavero artesanal" class="img-fluid rounded shadow" width="300" height="300">
+          </div>
+        </div>
+
+        <p class="mt-3">Llaveros y accesorios hechos con resina, llenos de color y creatividad.</p>
+        <p><strong>Integrantes:</strong> Darlin Dayana, Sharith Daniela, Leydi Yurani, Cielo Viveros, Darlin Valeria.</p>
+        <p><strong>Precio:</strong> $10.000</p>
+      </div>
+
+      <div class="modal-footer">
+        <!-- Botón de pedir (solo funciona en móviles) -->
+        <button class="btn btn-success" onclick="pedirLlaveros()">Pedir 📞</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script (puede ir al final del body si cada grupo tiene su número distinto) -->
+<script>
+function pedirLlaveros() {
+  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const numero = '+573001234567'; // <-- cambia este número por el del grupo de Llaveros
+
+  if (esMovil) {
+    window.location.href = 'tel:' + numero;
+  }
+}
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ecoferia Escolar 11° | Institución Educativa Pablo Emilio Carvajal - Sede Matías Mulumba</p>
+    <p><strong>&#169;CREATED BY JOSHUA&reg;&#x1F60E;<img src="miB.png" alt="Deivi emoji" style="width:22px; height:22px; vertical-align:middle;"></strong></p>
+  </footer>
+
+  <!-- Bootstrap JS (obligatorio para modales) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
